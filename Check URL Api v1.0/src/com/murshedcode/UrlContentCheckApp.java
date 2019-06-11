@@ -51,13 +51,17 @@ public class UrlContentCheckApp {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
 		System.out.println("\n Process completed......\n");
 	}
 
-	public void throwAnException() {
-		
+	
+	public void throwAnException() throws Exception {
+		try {
+			String url = "";
+			UrlHttpRequest.getJsonObject(url);
+		} catch(Exception e) {
+			throw new NullPointerException();
+		}
 	}
 
 }
