@@ -22,7 +22,7 @@ class UrlHttpRequestTest {
 
 
 	@Test
-	void testURL() throws Exception {
+	void testValidUrl() throws Exception {
 		String strUrl = "https://google.com";
 
 		try {
@@ -120,7 +120,7 @@ class UrlHttpRequestTest {
 
 
 	@Test
-	public void verifyJsonObjectSimilar() {
+	public void testJsonObjectSimilar() {
 		JSONObject JsonObj1 = null;
 		JSONObject JsonObj2 = null;
 		try {
