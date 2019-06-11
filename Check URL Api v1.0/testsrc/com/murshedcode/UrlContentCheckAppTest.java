@@ -1,31 +1,29 @@
 package com.murshedcode;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.nio.charset.MalformedInputException;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class UrlContentCheckAppTest {
-
+	private UrlContentCheckApp UrlContentCheckAppTest = null;
+	
+	
 	@BeforeEach
 	void setUp() throws Exception {
+		UrlContentCheckAppTest = new UrlContentCheckApp();
 	}
+
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void testForExceptions() {
+	    UrlContentCheckApp UrlContentCheckAppTest = new UrlContentCheckApp();
+	    try {
+	    	UrlContentCheckAppTest.throwAnException();
+		    fail("Expected exception not thrown");		// needed implement
+	    } catch (Exception e) {
+	        assertTrue(e instanceof NullPointerException);
+	    }
 	}
-
-
-	@Test(expected  = MalformedInputException.class)
-	void validateUrlExceptionTest() throws MalformedInputException
-	{
-		// check youtube and implement
-		
-	}
-
-
-
 }
