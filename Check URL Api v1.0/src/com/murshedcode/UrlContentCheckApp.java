@@ -7,7 +7,6 @@ import java.util.Scanner;
 /**
  * This is main class where user input will be taken as specific format and invoke utility methods from helper class 
  ** and display result as Json format.
- * 
  * @author Murshed
  */
 
@@ -15,10 +14,9 @@ import java.util.Scanner;
 
 public class UrlContentCheckApp {
 
-	
 	public static void main(String[] args) {
 		System.out.println("=============The app will take url address as input and test the header response============== "
-				+ " \n =================@MurshedCode========================	 ");
+				+ " \n ==================@MurshedCode========================	 ");
 
 		String url ="";
 		try {
@@ -46,9 +44,8 @@ public class UrlContentCheckApp {
 				UrlHttpRequest.getJsonObject(url);
 			}
 		}  catch (MalformedURLException e) {
-			System.out.println(" Entre valid url .....Check the input requirement as states instruction on sample input file ...... ");
+			System.out.println(" Entre valid url .....Check the input requirement as instructed through sample input file ...... ");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("\n Process completed......\n");
